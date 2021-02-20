@@ -1,0 +1,308 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@													 		   @@			
+@@   Comments for working with raw TR data (mathtr command):   @@
+@@															   @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+There are two types of control elements in the program: buttons and options. Description is given separately for each type and each of two panels of the program (1 - Open & See; 2 - Fit).
+! If some part of program still calculate, it indicates as a red bracket on the right side of Wolfram Mathematica window. Please, wait until it disappears. 
+! If you enter an incorrect value of the changing parameters or open incorrect file, you will see a dialog box in which you will be informed about what was wrong.
+! To run a program you should click a button that do what you need.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																				%%
+%%		Panel 1. Open; 2D Plot; Cross-Section Plots; Comparison of spectra      %%  
+%%																				%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+***************
+**			 **
+**	Buttons  **
+**			 **
+***************
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~  Open File Part  ~~
+~~~~~~~~~~~~~~~~~~~~~~
+1. "Open File"
+Opens a dialog box to choose a file (*.csv) to open. "Experimental_Data" folder opens by default.
+! Unfinished files can also be opened. You will see a relevant warning.
+2. "Convert Data"
+Converts raw data in the format appropriate for later treatment.
+! This button should always be clicked after you open a new file.
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~   2D Plot Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~
+3. "Density Plot"
+Shows a 2D graph of an opened file.
+4. "Clear Figure"
+Removes 2D graph from the panel.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~   Cross-Section Plot Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5. "Cross-Section Plot"
+Opens two special manipulators for plotting the magnetic field and time cross-sections of the TR data.
+The value of magnetic field / time of the cross-sections can be changed by pressing the “-” or “+” sign, or by entering the desired value in a special field.
+6. "Clear Figures"
+Removes cross-section manipulators from the panel.
+7. "Browse"
+Opens a dialog box to choose a file name to save the desired cross-sections. Please, save your data only in "Experimental_Data" folder.
+8. "Save Data"
+Saves cross-sections to selected file. Cross-sections are saved in .csv (comma separated values) format in two column: Field, Signal or Time, Signal, respectively. 
+! The cross-sections that are currently opened on the manipulators are saved.
+9. "Array Export"
+Saves your TR data in a 2D table (x axis: Field; y axis: Time).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~   Memorization Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10. "Memorize Spectrum"
+Memorizes a spectrum that is currently shown on the manipulator. The value of time of this spectrum is automatically shown on the graph legend. The graph of memorized spectra is automatically shown.
+! Spectra from different files can be memorized and compared by this function.
+11. "Memorize Kinetics"
+Memorizes a kinetics that is currently shown on the manipulator. The value of magnetic field of this kinetics is automatically shown on the graph legend. The graph of memorized kinetics is automatically shown.
+! Kinetics from different files can be memorized and compared by this function.
+! If "Off-Resonance" option is enabled, this button saves off-resonance signal.
+12. "Delete Arbitary Spectrum"
+Deletes a spectrum from your memorized graph according to the number you entered in "Number to Delete" option.
+! The number is counted from the left side of the legend. The leftmost is one (the last memorized spectrum), etc.
+13. "Delete Arbitary Kinetics"
+Deletes a kinetics from your memorized graph according to the number you entered in "Number to Delete" option.
+! The number is counted from the left side of the legend. The leftmost is one (the last memorized kinetics), etc.
+14. "Delete All"
+Removes all memorized kinetics and spectra.
+
+***************
+**			 **
+**	Options  **
+**			 **
+***************
+
+1. "Full Path to File"
+Shows the full path to the file that you opened.
+2. "Full Path to File for Saving"
+Shows the full path to a file for saving the desired cross-sections (see "Cross-Section Plot Part").
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~  Open File Part  ~~
+~~~~~~~~~~~~~~~~~~~~~~
+3. "Comments in File"
+Shows comments (see point 2 in comments for tr command) in the file that you opened.
+4. "Field for Substraction / G"
+Allows to set magnetic field to additionally substract kinetics at this field from all experimental data.
+Magnetic field of the starting point of your data is set by default.
+! After changing this value "Convert Data" button should be pressed for recalculating. 
+5. "Time for Substraction / mcs"
+Allows to set time to additionally substract spectrum at this time from all experimental data.
+Time of the first point of your data is set by default.
+! After changing this value "Convert Data" button should be pressed for recalculating.
+6. "Substraction Type"
+Allows to choose an option for additional substracting from all experimental data.
+"Nothing"  - Only off-resonance signal is substracted by default;
+"Kinetics" - additionally substract kinetics at the field you entered;
+"Spectrum" - additionally substract spectrum at the time you entered.
+7. "Off-Resonance Field / G"
+Shows the value of the off-resonance field you used for recording the file you opened.
+8. "Do Not Want To Substracte Off-Resonance?"
+An option that allows to see the data without substracting of off-resonance signal. Additional substracting at arbitrary field / time can be used. This option can be used to change the value of off-resonance field to a different one in the range of recorded data.
+! After changing this option "Convert Data" button should be pressed for recalculating.
+9. "Time Of The Maximum / mcs"
+Shows time of the maximum signal in the file that you opened.
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~   2D Plot Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~
+10. "Time Axis / Points"
+Changes the number of time points for 2D graph. 100 is the default value. 
+The lower this value, the worse quality of 2D graph, but the faster plotting time.
+11. "Field Axis / Points"
+Changes the number of magnetic field points for 2D graph. 200 is the default value. 
+The lower this value, the worse quality of 2D graph, but the faster plotting time.
+12. "Plot Explorer Function"
+This option turns on a Plot Explorer function. This function allow to zoom the spectrum (hold "Ctrl" on keybord). There is also a menu (in the upper right corner) for saving the image.
+! It is better to disable this function when it is not necessary for faster program performance.
+! By pressing the right mouse button and selecting "Get Coordinate" option, you can see the coordinates of the point under the cursor. Plot Explorer Function should be turned off.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~   Cross-Section Plot Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13. "Plot Explorer Function"
+This option turns on a Plot Explorer function for both manipulators. This function allow to zoom the spectra (hold "Ctrl" on keybord). There is also a menu (in the upper right corner) for saving the image.
+! It is better to disable this function when it is not necessary for faster program performance.
+! By pressing the right mouse button and selecting "Get Coordinate" option, you can see the coordinates of the point under the cursor. Plot Explorer Function should be turned off.
+14. "2D Graph"
+This option shows a 2D plot of you data with red dashed lines that show the value of magnetic field and time of cross-sections. Both lines are dynamically change position when you change the value of magnetic field or time of cross-sections.
+! Works only if cross-section manipulators are shown.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~   Memorization Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+15. "Normalization"
+This option normalizes the memorized kinetics and spectra. The graph is updated automatically.
+! Positive kinetics are inverted in "Normalization Mode".
+16. "Off-Resonance"
+When this option is enabled "Memorize Kinetics" button saves off-resonance signal.
+! Do not forget to disable it if you want to save one more cross-section,instead of off-resonance signal.
+17. "Type"
+Changes the type of plotting memorized kinetics and spectra. There are two options:
+"Overlapping" - Plot you data as it is;
+"Shifting"    - Shifts each subsequent spectrum / kinetics by adding 1 to it.
+! "Shifting Option" works only if "Normalization Mode" is enabled.
+! The graph is updated automatically.
+18. "Plot Explorer Function"
+This option turns on a Plot Explorer function for memorized graphs. This function allow to zoom the spectra (hold "Ctrl" on keybord). There is also a menu (in the upper right corner) for saving the image.
+! It is better to disable this function when it is not necessary for faster program performance.
+! By pressing the right mouse button and selecting "Get Coordinate" option, you can see the coordinates of the point under the cursor. Plot Explorer Function should be turned off.
+19. "Number to Delete (From Left)"
+Changes the number of the spectrum / kinetics you want to remove from your memorized graphs. Default value is 1 (the last memorized spectrum / kinetics).
+! The number is counted from the left side of the legend. The leftmost is one (the last memorized spectrum / kinetics), etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																				%%
+%%	   Panel 2. Fitting of Arbitrary Part of Kinetics; Averaging of Kinetics    %%  
+%%																				%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+***************
+**			 **
+**	Buttons  **
+**			 **
+***************
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~   Fitting Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+1. "Fit Data"
+Fits averaged kinetics in the chosen time range (see "Start Time For Arbitrary Part / mcs" and "End Time For Arbitrary Part / mcs" options). After fitting, shows obtained results (fit, fit residuals, parameter table, model, description). 
+There are three models:
+ZL + A1*Exp(-t/T1)		  		   - One Exponential model; ZL (a.u.), A1 (a.u.), T1 (mcs) - fit parameters; 
+ZL + A1*Exp(-t/T1) + A2*Exp(-t/T2) - Two Exponential model; ZL (a.u.), A1 (a.u.), T1 (mcs), A2, T2 - fit parameters;
+ZL - t/T 						   - Linear model; ZL (a.u.), T (mcs) - fit parameters;
+All of them are fitted at the same time.
+! Kinetics are averaged (summed and divided by their total number) in the chosen magnetic field range (see "Start Field For Averaging / G" and "End Field For Averaging / G" options).
+! Sometimes the initial values of the fit parameters have to be manually changed (see options 1-6), in order to help in converging the least-square fitting.
+! The same values of "Start Field For Averaging / G:" and "End Field For Averaging / G:" options can be used. This equals to fitting of nonaveraged kinetics.
+2. "Browse"
+Opens a dialog box to choose a file name to save obtained fit. Please, save your data only in "Experimental_Data" folder. 
+3. "Save Data, Fit, And Residuals"
+Saves data, fit, fit residuals and parameter table to selected file. Data, fit, and fit residuals are saved in .csv (comma separated values) format in two column: Time, Signal. Parameter table are saved as a table.
+! The name of file is automatically changed for data, fit, fit residuals and parameter table.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~   Averaged Data Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4. "Average Data Plot"
+Shows a graph of an averaged kinetics in the chosen field range (see "Start Field For Averaging / G" and "End Field For Averaging / G" options). The time range (see "Start Time For Arbitrary Part / mcs" and "End Time For Arbitrary Part / mcs" options) in which the kinetics is fitted is indicated as the red area. 
+! The time range is dynamically changed when the values of "Start Time For Arbitrary Part / mcs" or "End Time For Arbitrary Part / mcs" options are changed.
+! The legend shows the magnetic field range used for averaging.
+5. "Clear Fit And Kinetics"
+Removes graphs of the averaged kinetics and fit.
+6. "Memorize Averaged"
+Memorizes an averaged kinetics that is currently shown on the "Averaged Data Plot" graph. The value of the magnetic field range that is used for averaging is automatically shown on the graph legend. The graph of memorized kinetics is automatically shown.
+! The legend shows the magnetic field range used for averaging of each memorized kinetics.
+! Kinetics from different files can be memorized and compared by this function.
+7. "Delete Arbitrary"
+Deletes an averaged kinetics from your memorized graph according to the number you entered in "Number to Delete" option.
+! The number is counted from the left side of the legend. The leftmost is one (the last memorized kinetics), etc.
+8. "Delete All"
+Removes all memorized kinetics.
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~   2D Plot Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+9. "2D Plot"
+Shows a 2D plot of you data with red dashed lines that show the values of magnetic field and time that you used for averagind and fitting, respectively. All lines are dynamically changed its position when you change the values of magnetic field or time.
+10. "Clear 2D Plot"
+Removes 2D plot from the panel.
+
+***************
+**			 **
+**	Options  **
+**			 **
+***************
+
+1. "Full Path to File for Saving"
+Shows the full path to a file for saving the desired fit (see "Fitting Part").
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~   Fitting Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+Set of initial parameters for least-square fitting ("Fit Data" button):
+2. "Base Level"
+Changes the initial value of the base level parameter (ZL) for fitting. Default value is 0.
+3. "Amplitude of Exp1"
+Changes the initial value of the amplitude of the first exponent (A1) for fitting. Default value is 0.5 a.u.
+4. "Power of Exp1"
+Changes the initial value of the power of the first exponent (T1) for fitting. Default value is 500 mcs.
+5. "Amplitude of Exp2"
+Changes the initial value of the amplitude of the second exponent (A2) for fitting. Default value is 0.1 a.u.
+! Necessary only for two exponential model.
+6. "Power of Exp2"
+Changes the initial value of the power of the first exponent (T2) for fitting. Default value is 2000 mcs.
+! Necessary only for two exponential model.
+7. "Plot Explorer Function"
+This option turns on a Plot Explorer function for memorized graphs. This function allow to zoom the spectra (hold "Ctrl" on keybord). There is also a menu (in the upper right corner) for saving the image.
+! It is better to disable this function when it is not necessary for faster program performance.
+8. "Model Wihout BaseLine"
+This option allows to use the exponential models without base level parameter:
+A1*Exp(-t/T1)		  		  - One Exponential model; ZL (a.u.), A1 (a.u.), T1 (mcs) - fit parameters; 
+A1*Exp(-t/T1) + A2*Exp(-t/T2) - Two Exponential model; ZL (a.u.), A1 (a.u.), T1 (mcs), A2, T2 - fit parameters;
+ZL - t/T 					  - Linear model; ZL (a.u.), T (mcs) - fit parameters;
+! After changing this option "Fit Data" button should be cliclked again for refitting.
+9. "Type of Model"
+Switches the graph of fit and fit residuals according to chosen model. There are three options:
+"One Exp"	- One exponential model
+"Two Exp"	- Two exponential model
+"Linear"	- Linear model
+! There is no need in clicking "Fit Data" button after changing this option. All three models are fitted at the same time.
+10. "Start Field For Averaging / G"
+Changes the value of magnetic field that is used as a starting point for averaging. Default value is the magnetic field of the starting point of your data.
+11. "End Field For Averaging / G"
+Changes the value of magnetic field that is used as an ending point for averaging. Default value equals to the value of "Start Field For Averaging / G" option.
+! Kinetics are averaged by summing all experimental kinetics in the chosen field range and dividing the total kinetics by total number of summed kinetics).
+! The same values of "Start Field For Averaging / G:" and "End Field For Averaging / G:" options can be used. This equals to fitting of nonaveraged kinetics.
+12. "Start Time For Arbitrary Part / mcs"
+Changes the value of time that is used as a starting point fot fitting. Default value is time of the maximum signal in the file that you opened.
+13. "End Time For Arbitrary Part / mcs"
+Changes the value of time that is used as an ending point fot fitting. Default value is the last time point in the file that you opened.
+! The time range in which the kinetics is fitted is indicated as the red area on "Averaged Data Plot". 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~   Averaged Data Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+14. "Normalization"
+This option normalizes the memorized averaged kinetics.
+! Positive kinetics are inverted in "Normalization Mode".
+15. "Type"
+Changes the type of plotting memorized averaged kinetics. There are two options:
+"Overlapping" - Plot you data as it is;
+"Shifting"    - Shifts each subsequent kinetics by adding 1 to it.
+! "Shifting Option" works only if "Normalization Mode" is enabled.
+16. "Number to Delete (From Left)"
+Changes the number of the averaged kinetics you want to remove from your memorized graph. Default value is 1 (the last memorized averaged kinetics).
+! The number is counted from the left side of the legend. The leftmost is one (the last memorized averaged kinetics), etc.
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~   2D Plot Part   ~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+There is no option available.
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!								  				  !!			
+!!     Last update 30/08/2019 by A.R. Melnikov	  !!
+!!							 	  				  !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+
+
