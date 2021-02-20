@@ -5,11 +5,11 @@
 
 ## Basic usage
 
-1. Installing Mathematica
+1. Wolfram Mathematica
 
 Install the Wolfram Mathematica version 11 or higher.
 
-2. Setting of global options for initialization cells
+2. Global options for initialization cells
 
 In Wolfram Mathematica press:
 
@@ -27,7 +27,7 @@ In "Notebook Options - Evaluation Options" change:
 
 Press "Apply".
 
-3. Changing the directory
+3. Directories
 
 Open the TR_ESR program in Wolfram Mathematica. Modify the specifeied two lines according to your preference for opening directories:
 
@@ -36,5 +36,7 @@ Open the TR_ESR program in Wolfram Mathematica. Modify the specifeied two lines 
 
 The first directory will be opened when you click the "Open file" button. The second directory opens when you click the "Save data" button.
 
-4. A brief description of the available functions is given in the file "Commands_manual.txt".
+4. Manual
+
+A brief description of the available functions is given in the file "Commands_manual.txt".
 
