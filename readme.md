@@ -40,3 +40,6 @@ The first directory will be opened when you click the "Open file" button. The se
 
 A brief description of the available functions is given in the file "Commands_manual.txt".
 
+## How to cite
+
+Anatoly R. Melnikov, Mikhail A. Kiskin, Yaroslav V. Getmanov, Oleg A. Shevchenko, Matvey V. Fedin, and Sergey L. Veber , "Technical and software improvements of the EPR spectroscopy endstation at the NovoFEL facility: Status 2020", AIP Conference Proceedings 2299, 030010 (2020) https://doi.org/10.1063/5.0030338
